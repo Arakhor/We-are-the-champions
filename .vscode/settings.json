@@ -1,0 +1,9 @@
+{
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.formatOnPaste": false, // required (Prettier ESLint)
+  "editor.formatOnType": false, // required (Prettier ESLint)
+  "editor.formatOnSave": true, // optional  (Prettier ESLint)
+  "editor.formatOnSaveMode": "file", // required to format on save (Prettier ESLint)
+  "files.autoSave": "onFocusChange", // optional but recommended (Prettier ESLint)
+  "vs-code-prettier-eslint.prettierLast": false // set as "true" to run 'prettier' last not first (Prettier ESLint)
+}
