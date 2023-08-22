@@ -4,6 +4,7 @@ import {
 	ref,
 	push,
 	onValue,
+	remove,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 const appSettings = {
@@ -38,13 +39,12 @@ formEl.addEventListener("submit", (e) => {
 
 	if (msgEl.value == "" || senderEl.value == "" || recipientEl.value == "") {
 		console.log("error");
-	} else if (msgEl.value.length > msgEl.maxLength) {
-		console.log("error");
 	} else {
 		const item = {
 			msg: msgEl.value,
 			sender: senderEl.value,
 			recipient: recipientEl.value,
+			likes: 0,
 		};
 		push(listInDB, item);
 		clearInput();
@@ -53,7 +53,14 @@ formEl.addEventListener("submit", (e) => {
 
 function appendToFormListEl(item) {
 	let newEl = document.createElement("li");
-	newEl.innerHTML = `<h5>To ${item[1].recipient}</h5><p>${item[1].msg}</p><h5>From ${item[1].sender}</h5>`;
+	newEl.innerHTML = `
+		<h5>To ${item[1].recipient}</h5>
+		<p>${item[1].msg}</p>
+		<h5>From ${item[1].sender}</h5>`;
+	newEl.addEventListener("click", function () {
+		let exactLocationInDB = ref(database, `forms/${item[0]}`);
+		remove(exactLocationInDB);
+	});
 	formListEl.append(newEl);
 }
 
