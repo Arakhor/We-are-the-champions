@@ -1,4 +1,101 @@
-html, body {
-    margin: 0;
-    padding: 0;
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	color: #ffffff;
+	background-color: #1b1924;
+	font-family: "Inter", sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	max-width: 320px;
+	margin: auto;
+}
+
+#logo {
+	margin: 50px auto 12px;
+	width: 90px;
+}
+
+h1,
+h2,
+button {
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: 700;
+	text-align: center;
+}
+
+h1 {
+	font-size: 1.6rem;
+	margin: 1rem 0;
+}
+
+h2 {
+	font-size: 1.25rem;
+	margin: 1rem 0;
+}
+
+#form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+#form > * {
+	width: 100%;
+	border: none;
+	border-radius: 8px;
+}
+
+#form textarea,
+#form input {
+	color: white;
+	background-color: #444059;
+	padding: 9px 16px;
+}
+
+#form textarea {
+	resize: none;
+	height: 120px;
+}
+
+#form input {
+	flex: 1;
+	text-align: center;
+}
+
+#form button {
+	font-size: 1.4rem;
+	color: #04131c;
+	background-color: #28a9f1;
+	padding: 16px 0 12px;
+}
+
+ul {
+	display: flex;
+	flex-flow: column-reverse;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	color: #1b1924;
+	background-color: #ffffff;
+	padding: 1rem;
+	margin-bottom: 0.7rem;
+	max-height: 120px;
+}
+
+h5 {
+	font-size: 0.875rem;
+	margin: 0;
+}
+
+p {
+	font-size: 0.875rem;
+	margin: 0.7rem 0;
 }

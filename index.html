@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta
-      charset="utf-8"
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-    />
-    <title>We are the Champions</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <h1>We are the Champions</h1>
-    <script src="index.js"></script>
-  </body>
+	<head>
+		<meta
+			charset="utf-8"
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>We are the Champions</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="container">
+			<img
+				id="logo"
+				src="assets\freddie.png"
+				alt="silhouette of a person cheering"
+			/>
+			<h1>We are the Champions</h1>
+			<form id="form">
+				<textarea
+					id="msg"
+					class="form-control"
+					placeholder="Write your endorsement here"
+					maxlength="200"
+				></textarea>
+				<input
+					id="sender"
+					class="form-control"
+					type="text"
+					placeholder="From"
+				/>
+				<input
+					id="recipient"
+					class="form-control"
+					type="text"
+					placeholder="To"
+				/>
+				<button id="publish" type="submit">Publish</button>
+			</form>
+			<h2>- Endorsements -</h2>
+			<ul id="form-list"></ul>
+		</div>
+		<script src="index.js" type="module"></script>
+	</body>
 </html>
